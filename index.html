@@ -4,9 +4,16 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Il Mio Portfolio</title>
+  <!-- Config Tailwind per dark mode by class -->
+  <script>
+    tailwind = window.tailwind || {};
+    tailwind.config = {
+      darkMode: 'class'
+    };
+  </script>
   <!-- Import Tailwind CDN per styling rapido -->
   <script src="https://cdn.tailwindcss.com"></script>
-  <!-- Framer Motion per animazioni React -->
+  <!-- Framer Motion per animazioni React (UMD global: framerMotion) -->
   <script src="https://unpkg.com/framer-motion/dist/framer-motion.umd.js"></script>
 </head>
 <body class="bg-gray-100 text-gray-800">
@@ -22,11 +29,15 @@
   <!-- Il nostro codice React -->
   <script type="text/babel">
     const { useState } = React;
-    const { motion } = window["framer-motion"];
+    // Framer Motion UMD global is 'framerMotion'
+    const { motion } = window.framerMotion;
 
     function App() {
       const [darkMode, setDarkMode] = useState(false);
-      const toggleDark = () => setDarkMode(!darkMode);
+      const toggleDark = () => {
+        setDarkMode(!darkMode);
+        document.documentElement.classList.toggle('dark');
+      };
 
       return (
         <div className={darkMode ? 'min-h-screen bg-gray-900 text-white' : 'min-h-screen bg-white text-gray-900'}>
