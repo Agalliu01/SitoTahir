@@ -52,152 +52,42 @@
     html { scroll-behavior: smooth; }
     body { font-family:'Roboto',sans-serif; color:var(--text-color); background:#fff; }
 
-    header {
-      background:var(--primary-color);
-      color:#fff;
-      padding:1rem 0;
-      position:sticky;
-      top:0;
-      z-index:1000;
-      box-shadow: 0 2px 5px rgba(0,0,0,0.1);
-    }
-    nav ul {
-      list-style:none;
-      display:flex;
-      justify-content:center;
-      gap:2rem;
-    }
-    nav a {
-      text-decoration:none;
-      color:#fff;
-      font-weight:700;
-      position:relative;
-      transition: color var(--transition-speed);
-    }
-    nav a::after {
-      content: '';
-      position: absolute;
-      left: 0;
-      bottom: -4px;
-      width: 0;
-      height: 2px;
-      background: var(--accent-color);
-      transition: width var(--transition-speed);
-    }
-    nav a:hover {
-      color:var(--accent-color);
-    }
-    nav a:hover::after {
-      width: 100%;
-    }
+    header { background:var(--primary-color); color:#fff; padding:1rem 0; position:sticky; top:0; z-index:1000; box-shadow: 0 2px 5px rgba(0,0,0,0.1); }
+    nav ul { list-style:none; display:flex; justify-content:center; gap:2rem; }
+    nav a { text-decoration:none; color:#fff; font-weight:700; position:relative; transition: color var(--transition-speed); }
+    nav a::after { content: ''; position:absolute; left:0; bottom:-4px; width:0; height:2px; background:var(--accent-color); transition: width var(--transition-speed); }
+    nav a:hover { color:var(--accent-color); }
+    nav a:hover::after { width:100%; }
 
-    .hero {
-      background: linear-gradient(135deg, #ecf0f1 0%, #bdc3c7 100%);
-      text-align: center;
-      padding: 4rem 1rem;
-      position: relative;
-      overflow: hidden;
-    }
-    .hero::before {
-      content: '';
-      position: absolute;
-      width: 200px;
-      height: 200px;
-      background: var(--accent-color);
-      border-radius: 50%;
-      top: -50px;
-      right: -50px;
-      opacity: 0.2;
-      animation: float 6s ease-in-out infinite;
-    }
-    @keyframes float {
-      0%,100% { transform: translateY(0); }
-      50% { transform: translateY(20px); }
-    }
-    .hero img {
-      width: 160px;
-      height: 160px;
-      border-radius: 50%;
-      border: 4px solid var(--accent-color);
-      box-shadow: 0 4px 10px rgba(0,0,0,0.1);
-      margin-bottom: 1rem;
-      transition: transform var(--transition-speed);
-    }
-    .hero img:hover {
-      transform: scale(1.05);
-    }
+    .hero { background: linear-gradient(135deg, #ecf0f1 0%, #bdc3c7 100%); text-align:center; padding:4rem 1rem; position:relative; overflow:hidden; }
+    .hero::before { content:''; position:absolute; width:200px; height:200px; background:var(--accent-color); border-radius:50%; top:-50px; right:-50px; opacity:0.2; animation: float 6s ease-in-out infinite; }
+    @keyframes float { 0%,100% { transform: translateY(0); } 50% { transform: translateY(20px); } }
+    .hero img { width:160px; height:160px; border-radius:50%; border:4px solid var(--accent-color); box-shadow:0 4px 10px rgba(0,0,0,0.1); margin-bottom:1rem; transition: transform var(--transition-speed); }
+    .hero img:hover { transform: scale(1.05); }
     .hero h1 { font-size:3rem; margin-bottom:1rem; animation: fadeInUp 1s both; }
     .hero p { font-size:1.25rem; color:var(--primary-color); animation: fadeInUp 1s 0.3s both; }
 
     section { padding:3rem 1rem; max-width:900px; margin:auto; opacity:0; transform: translateY(20px); animation: fadeInUp 0.8s forwards; }
-    section:nth-of-type(2) { animation-delay: 0.4s; }
-    section:nth-of-type(3) { animation-delay: 0.6s; }
-    section:nth-of-type(4) { animation-delay: 0.8s; }
-    section:nth-of-type(5) { animation-delay: 1s; }
-    @keyframes fadeInUp {
-      to { opacity:1; transform: translateY(0); }
-    }
+    section:nth-of-type(2) { animation-delay:0.4s; }
+    section:nth-of-type(3) { animation-delay:0.6s; }
+    section:nth-of-type(4) { animation-delay:0.8s; }
+    section:nth-of-type(5) { animation-delay:1s; }
+    @keyframes fadeInUp { to { opacity:1; transform: translateY(0); } }
     section+section { border-top:1px solid var(--bg-light); }
 
-    h2 {
-      font-size:2rem;
-      color:var(--primary-color);
-      margin-bottom:1rem;
-      position:relative;
-    }
-    h2::after {
-      content:'';
-      width:50px;
-      height:4px;
-      background:var(--accent-color);
-      position:absolute;
-      left:0;
-      bottom:-0.5rem;
-    }
-    .item {
-      margin-bottom:2rem;
-      padding:1rem;
-      background: #fff;
-      border-radius:8px;
-      box-shadow: 0 2px 5px rgba(0,0,0,0.05);
-      transition: box-shadow var(--transition-speed);
-    }
-    .item:hover {
-      box-shadow: 0 4px 15px rgba(0,0,0,0.1);
-    }
+    h2 { font-size:2rem; color:var(--primary-color); margin-bottom:1rem; position:relative; }
+    h2::after { content:''; width:50px; height:4px; background:var(--accent-color); position:absolute; left:0; bottom:-0.5rem; }
+    .item { margin-bottom:2rem; padding:1rem; background:#fff; border-radius:8px; box-shadow:0 2px 5px rgba(0,0,0,0.05); transition: box-shadow var(--transition-speed); }
+    .item:hover { box-shadow:0 4px 15px rgba(0,0,0,0.1); }
     .item h3 { font-size:1.5rem; color:var(--primary-color); margin-bottom:0.5rem; }
     .item span { display:block; font-size:0.95rem; color:var(--accent-color); margin-bottom:0.5rem; }
 
-    .skills ul {
-      list-style:none;
-      display:grid;
-      grid-template-columns:repeat(auto-fill,minmax(200px,1fr));
-      gap:0.5rem 1rem;
-    }
-    .skills li {
-      background:var(--bg-light);
-      padding:0.75rem 1rem;
-      border-radius:8px;
-      text-align:center;
-      font-weight:500;
-      transition: transform var(--transition-speed), background var(--transition-speed);
-    }
-    .skills li:hover {
-      transform: translateY(-5px);
-     	background: #fff;
-      box-shadow: 0 4px 10px rgba(0,0,0,0.1);
-    }
+    .skills-section { display:grid; grid-template-columns:repeat(auto-fill,minmax(300px,1fr)); gap:1rem; }
+    .skills-section .item { background:var(--bg-light); padding:1rem; border-radius:8px; }
 
-    footer {
-      text-align:center;
-      padding:2rem 1rem;
-      background:var(--bg-light);
-      font-size:0.9rem;
-      color:var(--text-color);
-    }
+    footer { text-align:center; padding:2rem 1rem; background:var(--bg-light); font-size:0.9rem; color:var(--text-color); }
 
-    @media (max-width:600px) {
-      .hero h1{font-size:2.5rem;} .hero p{font-size:1.1rem;} nav ul{flex-direction:column;gap:1rem;} }
+    @media (max-width:600px) { .hero h1 { font-size:2.5rem; } .hero p { font-size:1.1rem; } nav ul { flex-direction:column; gap:1rem; } }
   </style>
 </head>
 <body>
@@ -247,22 +137,51 @@
   <section id="education">
     <h2>Istruzione</h2>
     <div class="item">
-      <h3>Laurea Triennale in Informatica (L-31)</h3>
-      <span>2022-2025 | Università degli Studi dell'Insubria</span>
+      <h3>Anno Scolastico 2018-2019</h3>
+      <span>Varese (VA)</span>
     </div>
-    <!-- Altri titoli di studio -->
+    <div class="item">
+      <h3>Diploma in Informatica</h3>
+      <span>IIS Ponti, Gallarate (VA) | Anno scolastico 2021-2022</span>
+    </div>
+    <div class="item">
+      <h3>Laurea Triennale in Informatica (L-31)</h3>
+      <span>Università degli Studi dell’Insubria, sede di Varese | Conseguimento: 10 luglio 2025 (anno accademico 2024-2025)</span>
+    </div>
+    <div class="item">
+      <h3>Iscrizione Laurea Magistrale in Informatica (LM-18)</h3>
+      <span>Università degli Studi di Milano | Inizio anno accademico 2025-2026</span>
+    </div>
   </section>
 
-  <section id="skills" class="skills">
+  <section id="skills">
     <h2>Competenze</h2>
-    <ul>
-      <li>Java &amp; Kotlin (Android, OO)</li>
-      <li>JavaScript &amp; Node.js</li>
-      <li>Python &amp; Data Analysis</li>
-      <li>MongoDB &amp; PostgreSQL</li>
-      <li>Microservizi &amp; Docker</li>
-      <li>Problem Solving &amp; Teamwork</li>
-    </ul>
+    <div class="skills-section">
+      <div class="item">
+        <h3>Hard Skills</h3>
+        <ul>
+          <li>Java: sviluppo OO (IntelliJ, Eclipse, Android Studio)</li>
+          <li>JavaScript: front-end e back-end (Node.js) presso Padiglione Rossi, Varese</li>
+          <li>MongoDB & PostgreSQL: progettazione, normalizzazione, query avanzate, ottimizzazione</li>
+          <li>Kotlin: sviluppo social network per Android</li>
+          <li>Python: scripting, automazione, analisi dati (Colab)</li>
+          <li>Architettura a microservizi & Docker: progettazione e realizzazione di sistema completo</li>
+        </ul>
+      </div>
+      <div class="item">
+        <h3>Soft Skills</h3>
+        <ul>
+          <li>Lavoro in team: contesti multinazionali (Germania, Francia, Italia)</li>
+          <li>Resilienza e adattabilità: diversi ruoli e ambienti di lavoro</li>
+          <li>Problem solving: individuazione criticità e soluzioni efficaci</li>
+          <li>Gestione dello stress: alte performance in situazioni complesse</li>
+          <li>Flessibilità e versatilità: rapido apprendimento di tecnologie e macchinari</li>
+          <li>Orientamento al risultato: miglioramento continuo dei processi</li>
+          <li>Autonomia e responsabilità: organizzazione del lavoro e rispetto delle scadenze</li>
+          <li>Capacità di apprendere in fretta: competenze industriali e IT</li>
+        </ul>
+      </div>
+    </div>
   </section>
 
   <section id="contact">
