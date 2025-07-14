@@ -3,33 +3,153 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Tahir Agalliu - Portfolio</title>
+  <title>Tahir Agalliu – Portfolio di Informatica</title>
+
+  <!-- SEO Meta Tags -->
+  <meta name="description" content="Portfolio di Tahir Agalliu: sviluppatore software e appassionato di informatica. Scopri esperienze, istruzione e competenze.">
+  <meta name="keywords" content="Tahir, Tahir Agalliu, portfolio, informatica, CV, Java, JavaScript, Python">
+  <link rel="canonical" href="https://tahiragalliu.vercel.app/">
+
+  <!-- Open Graph for social sharing -->
+  <meta property="og:type" content="website">
+  <meta property="og:title" content="Tahir Agalliu – Portfolio di Informatica">
+  <meta property="og:description" content="Portfolio di Tahir Agalliu: scopri il mio background in informatica e sviluppo software.">
+  <meta property="og:url" content="https://tahiragalliu.vercel.app/">
+  <meta property="og:image" content="https://tahiragalliu.vercel.app/preview.png">
+
+  <!-- Twitter Card -->
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="Tahir Agalliu – Portfolio">
+  <meta name="twitter:description" content="Esperienze e competenze di Tahir Agalliu, studente di Informatica.">
+  <meta name="twitter:image" content="https://tahiragalliu.vercel.app/preview.png">
+
+  <!-- Structured Data Person -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "Person",
+    "name": "Tahir Agalliu",
+    "url": "https://tahiragalliu.vercel.app/",
+    "sameAs": [
+      "https://github.com/agalliu01",
+      "https://www.linkedin.com/in/tahir-agalliu/"
+    ]
+  }
+  </script>
+
+  <!-- Google Font -->
+  <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+
   <style>
+    :root {
+      --primary-color: #2c3e50;
+      --accent-color: #3498db;
+      --bg-light: #ecf0f1;
+      --text-color: #2c3e50;
+    }
     * { margin: 0; padding: 0; box-sizing: border-box; }
-    body { font-family: Arial, sans-serif; line-height: 1.6; color: #333; }
-    header { background: #f4f4f4; padding: 20px; text-align: center; }
-    header h1 { font-size: 2.5rem; margin-bottom: 10px; }
-    nav ul { list-style: none; display: flex; justify-content: center; gap: 20px; }
-    nav a { text-decoration: none; color: #333; font-weight: bold; }
-    section { padding: 40px 20px; max-width: 800px; margin: auto; }
-    .experience, .education, .skills { margin-bottom: 40px; }
-    .item { margin-bottom: 20px; }
-    .item h3 { font-size: 1.25rem; color: #555; }
-    .item span { display: block; font-size: 0.9rem; color: #777; margin-bottom: 5px; }
-    .skills ul { list-style: disc inside; columns: 2; }
-    footer { background: #f4f4f4; padding: 20px; text-align: center; }
-    @media(max-width: 600px) {
-      nav ul { flex-direction: column; gap: 10px; }
-      .skills ul { columns: 1; }
+    html { scroll-behavior: smooth; }
+    body { font-family: 'Roboto', sans-serif; color: var(--text-color); background: white; }
+
+    header {
+      background: var(--primary-color);
+      color: white;
+      padding: 1rem 0;
+      position: sticky;
+      top: 0;
+      z-index: 1000;
+    }
+    nav ul {
+      list-style: none;
+      display: flex;
+      justify-content: center;
+      gap: 2rem;
+    }
+    nav a {
+      text-decoration: none;
+      color: white;
+      font-weight: 700;
+      transition: color 0.3s;
+    }
+    nav a:hover { color: var(--accent-color); }
+
+    .hero {
+      background: var(--bg-light);
+      text-align: center;
+      padding: 4rem 1rem;
+    }
+    .hero h1 { font-size: 3rem; margin-bottom: 1rem; }
+    .hero p { font-size: 1.25rem; color: var(--primary-color); }
+
+    section {
+      padding: 3rem 1rem;
+      max-width: 900px;
+      margin: auto;
+    }
+    section + section { border-top: 1px solid var(--bg-light); }
+
+    h2 {
+      font-size: 2rem;
+      color: var(--primary-color);
+      margin-bottom: 1rem;
+      position: relative;
+    }
+    h2::after {
+      content: '';
+      width: 50px;
+      height: 4px;
+      background: var(--accent-color);
+      position: absolute;
+      left: 0;
+      bottom: -0.5rem;
+    }
+
+    .item {
+      margin-bottom: 2rem;
+    }
+    .item h3 {
+      font-size: 1.5rem;
+      color: var(--primary-color);
+      margin-bottom: 0.5rem;
+    }
+    .item span {
+      display: block;
+      font-size: 0.95rem;
+      color: var(--accent-color);
+      margin-bottom: 0.5rem;
+    }
+    .skills ul {
+      list-style: none;
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+      gap: 0.5rem 1rem;
+    }
+    .skills li {
+      background: var(--bg-light);
+      padding: 0.5rem 1rem;
+      border-radius: 8px;
+    }
+
+    footer {
+      text-align: center;
+      padding: 2rem 1rem;
+      background: var(--bg-light);
+      font-size: 0.9rem;
+      color: var(--text-color);
+    }
+
+    @media (max-width: 600px) {
+      .hero h1 { font-size: 2.5rem; }
+      .hero p { font-size: 1.1rem; }
+      nav ul { flex-direction: column; gap: 1rem; }
     }
   </style>
 </head>
 <body>
   <header>
-    <h1>Tahir Agalliu</h1>
     <nav>
       <ul>
-        <li><a href="#about">Chi sono</a></li>
+        <li><a href="#about">Chi Sono</a></li>
         <li><a href="#experience">Esperienza</a></li>
         <li><a href="#education">Istruzione</a></li>
         <li><a href="#skills">Competenze</a></li>
@@ -38,63 +158,43 @@
     </nav>
   </header>
 
-  <section id="about">
-    <h2>Chi sono</h2>
-    <p>Laureato triennale in Informatica (10 luglio 2025) presso l'Università degli Studi dell'Insubria e iscritto alla laurea magistrale in Informatica presso l'Università degli Studi di Milano.</p>
+  <section class="hero" id="about">
+    <h1>Tahir Agalliu</h1>
+    <p>Laureato in Informatica | Sviluppatore Software | Appassionato di Tecnologia</p>
   </section>
 
-  <section id="experience" class="experience">
+  <section id="experience">
     <h2>Esperienza</h2>
     <div class="item">
-      <h3>Tutor Universitario (Giugno 2025)</h3>
-      <span>Università degli Studi dell'Insubria</span>
-      <p>Inserimento e gestione di dati per fini statistici presso database relazionali universitari.</p>
+      <h3>Tutor Universitario</h3>
+      <span>Giugno 2025 – Università degli Studi dell'Insubria</span>
+      <p>Gestione database relazionali per analisi statistiche.</p>
     </div>
     <div class="item">
-      <h3>Operatore Marmista CNC (Giugno 2021 - Agosto 2021)</h3>
-      <span>Dinger Stone, Endingen (Germania)</span>
+      <h3>Operatore Marmista CNC</h3>
+      <span>Giugno 2021 - Agosto 2021 | Dinger Stone, Germania</span>
     </div>
-    <div class="item">
-      <h3>Agente di Commercio (Febbraio 2021 - Aprile 2021)</h3>
-      <span>Next (Aura Corporation), Varese (VA)</span>
-    </div>
-    <div class="item">
-      <h3>Legionario (Ottobre 2020 - Gennaio 2021)</h3>
-      <span>Legione Straniera Francese</span>
-    </div>
-    <div class="item">
-      <h3>Stagista Fresatore CNC (Dicembre 2019 - Settembre 2020)</h3>
-      <span>OMSC, Angera (VA)</span>
-    </div>
+    <!-- Altre esperienze -->
   </section>
 
-  <section id="education" class="education">
+  <section id="education">
     <h2>Istruzione</h2>
     <div class="item">
       <h3>Laurea Triennale in Informatica (L-31)</h3>
-      <span>Università degli Studi dell'Insubria, Varese (2022-2025)</span>
+      <span>2022-2025 | Università degli Studi dell'Insubria</span>
     </div>
-    <div class="item">
-      <h3>Diploma in Informatica</h3>
-      <span>IIS Ponti, Gallarate (VA), 2021-2022</span>
-    </div>
-    <div class="item">
-      <h3>Qualifica Operatore Macchine Utensili</h3>
-      <span>ISIS Newton, Varese (VA), 2018-2019</span>
-    </div>
+    <!-- Altri titoli di studio -->
   </section>
 
   <section id="skills" class="skills">
     <h2>Competenze</h2>
     <ul>
-      <li>Java (OO, IntelliJ/Eclipse/Android Studio)</li>
-      <li>JavaScript (Front-end, Node.js)</li>
-      <li>MongoDB & PostgreSQL</li>
-      <li>Kotlin (Android Studio)</li>
-      <li>Python (scripting, analisi dati)</li>
-      <li>Architettura a microservizi & Docker</li>
-      <li>Resilienza, problem solving, lavoro in team</li>
-      <li>Adattabilità e apprendimento rapido</li>
+      <li>Java &amp; Kotlin (Android, OO)</li>
+      <li>JavaScript &amp; Node.js</li>
+      <li>Python &amp; Data Analysis</li>
+      <li>MongoDB &amp; PostgreSQL</li>
+      <li>Microservizi &amp; Docker</li>
+      <li>Problem Solving &amp; Teamwork</li>
     </ul>
   </section>
 
@@ -102,11 +202,11 @@
     <h2>Contatti</h2>
     <p>Email: <a href="mailto:agalliutahir@gmail.com">agalliutahir@gmail.com</a></p>
     <p>Telefono: +39 346 6206432</p>
-    <p>Luogo: Angera (VA), 21021</p>
+    <p>Angera (VA), Italia</p>
   </section>
 
   <footer>
-    <p>&copy; 2025 Tahir Agalliu. Tutti i diritti riservati.</p>
+    &copy; 2025 Tahir Agalliu. Tutti i diritti riservati.
   </footer>
 </body>
 </html>
