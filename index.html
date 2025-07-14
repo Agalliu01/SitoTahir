@@ -3,210 +3,71 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Tahir Agalliu – Portfolio di Informatica</title>
-
-  <!-- SEO Meta Tags -->
-  <meta name="description" content="Portfolio di Tahir Agalliu: sviluppatore software e appassionato di informatica. Scopri esperienze, istruzione e competenze.">
-  <meta name="keywords" content="Tahir, Tahir Agalliu, portfolio, informatica, CV, Java, JavaScript, Python">
-  <link rel="canonical" href="https://tahiragalliu.vercel.app/">
-
-  <!-- Open Graph for social sharing -->
-  <meta property="og:type" content="website">
-  <meta property="og:title" content="Tahir Agalliu – Portfolio di Informatica">
-  <meta property="og:description" content="Portfolio di Tahir Agalliu: scopri il mio background in informatica e sviluppo software.">
-  <meta property="og:url" content="https://tahiragalliu.vercel.app/">
-  <meta property="og:image" content="https://tahiragalliu.vercel.app/preview.png">
-
-  <!-- Twitter Card -->
-  <meta name="twitter:card" content="summary_large_image">
-  <meta name="twitter:title" content="Tahir Agalliu – Portfolio">
-  <meta name="twitter:description" content="Esperienze e competenze di Tahir Agalliu, studente di Informatica.">
-  <meta name="twitter:image" content="https://tahiragalliu.vercel.app/preview.png">
-
-  <!-- Structured Data Person -->
-  <script type="application/ld+json">
-  {
-    "@context": "https://schema.org",
-    "@type": "Person",
-    "name": "Tahir Agalliu",
-    "url": "https://tahiragalliu.vercel.app/",
-    "sameAs": [
-      "https://github.com/agalliu01",
-      "https://www.linkedin.com/in/tahir-agalliu/"
-    ]
-  }
-  </script>
-
-  <!-- Google Font -->
-  <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
-
-  <style>
-    :root {
-      --primary-color: #2c3e50;
-      --accent-color: #3498db;
-      --bg-light: #ecf0f1;
-      --text-color: #2c3e50;
-    }
-    * { margin: 0; padding: 0; box-sizing: border-box; }
-    html { scroll-behavior: smooth; }
-    body { font-family: 'Roboto', sans-serif; color: var(--text-color); background: white; }
-
-    header {
-      background: var(--primary-color);
-      color: white;
-      padding: 1rem 0;
-      position: sticky;
-      top: 0;
-      z-index: 1000;
-    }
-    nav ul {
-      list-style: none;
-      display: flex;
-      justify-content: center;
-      gap: 2rem;
-    }
-    nav a {
-      text-decoration: none;
-      color: white;
-      font-weight: 700;
-      transition: color 0.3s;
-    }
-    nav a:hover { color: var(--accent-color); }
-
-    .hero {
-      background: var(--bg-light);
-      text-align: center;
-      padding: 4rem 1rem;
-    }
-    .hero h1 { font-size: 3rem; margin-bottom: 1rem; }
-    .hero p { font-size: 1.25rem; color: var(--primary-color); }
-
-    section {
-      padding: 3rem 1rem;
-      max-width: 900px;
-      margin: auto;
-    }
-    section + section { border-top: 1px solid var(--bg-light); }
-
-    h2 {
-      font-size: 2rem;
-      color: var(--primary-color);
-      margin-bottom: 1rem;
-      position: relative;
-    }
-    h2::after {
-      content: '';
-      width: 50px;
-      height: 4px;
-      background: var(--accent-color);
-      position: absolute;
-      left: 0;
-      bottom: -0.5rem;
-    }
-
-    .item {
-      margin-bottom: 2rem;
-    }
-    .item h3 {
-      font-size: 1.5rem;
-      color: var(--primary-color);
-      margin-bottom: 0.5rem;
-    }
-    .item span {
-      display: block;
-      font-size: 0.95rem;
-      color: var(--accent-color);
-      margin-bottom: 0.5rem;
-    }
-    .skills ul {
-      list-style: none;
-      display: grid;
-      grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
-      gap: 0.5rem 1rem;
-    }
-    .skills li {
-      background: var(--bg-light);
-      padding: 0.5rem 1rem;
-      border-radius: 8px;
-    }
-
-    footer {
-      text-align: center;
-      padding: 2rem 1rem;
-      background: var(--bg-light);
-      font-size: 0.9rem;
-      color: var(--text-color);
-    }
-
-    @media (max-width: 600px) {
-      .hero h1 { font-size: 2.5rem; }
-      .hero p { font-size: 1.1rem; }
-      nav ul { flex-direction: column; gap: 1rem; }
-    }
-  </style>
+  <title>Il Mio Portfolio</title>
+  <!-- Import Tailwind CDN per styling rapido -->
+  <script src="https://cdn.tailwindcss.com"></script>
+  <!-- Framer Motion per animazioni React -->
+  <script src="https://unpkg.com/framer-motion/dist/framer-motion.umd.js"></script>
 </head>
-<body>
-  <header>
-    <nav>
-      <ul>
-        <li><a href="#about">Chi Sono</a></li>
-        <li><a href="#experience">Esperienza</a></li>
-        <li><a href="#education">Istruzione</a></li>
-        <li><a href="#skills">Competenze</a></li>
-        <li><a href="#contact">Contatti</a></li>
-      </ul>
-    </nav>
-  </header>
+<body class="bg-gray-100 text-gray-800">
+  <!-- Root React -->
+  <div id="root"></div>
 
-  <section class="hero" id="about">
-    <h1>Tahir Agalliu</h1>
-    <p>Laureato in Informatica | Sviluppatore Software | Appassionato di Tecnologia</p>
-  </section>
+  <!-- React & ReactDOM da CDN -->
+  <script src="https://unpkg.com/react@18/umd/react.development.js" crossorigin></script>
+  <script src="https://unpkg.com/react-dom@18/umd/react-dom.development.js" crossorigin></script>
+  <!-- Babel per JSX in-browser -->
+  <script src="https://unpkg.com/@babel/standalone/babel.min.js"></script>
 
-  <section id="experience">
-    <h2>Esperienza</h2>
-    <div class="item">
-      <h3>Tutor Universitario</h3>
-      <span>Giugno 2025 – Università degli Studi dell'Insubria</span>
-      <p>Gestione database relazionali per analisi statistiche.</p>
-    </div>
-    <div class="item">
-      <h3>Operatore Marmista CNC</h3>
-      <span>Giugno 2021 - Agosto 2021 | Dinger Stone, Germania</span>
-    </div>
-    <!-- Altre esperienze -->
-  </section>
+  <!-- Il nostro codice React -->
+  <script type="text/babel">
+    const { useState } = React;
+    const { motion } = window["framer-motion"];
 
-  <section id="education">
-    <h2>Istruzione</h2>
-    <div class="item">
-      <h3>Laurea Triennale in Informatica (L-31)</h3>
-      <span>2022-2025 | Università degli Studi dell'Insubria</span>
-    </div>
-    <!-- Altri titoli di studio -->
-  </section>
+    function App() {
+      const [darkMode, setDarkMode] = useState(false);
+      const toggleDark = () => setDarkMode(!darkMode);
 
-  <section id="skills" class="skills">
-    <h2>Competenze</h2>
-    <ul>
-      <li>Java &amp; Kotlin (Android, OO)</li>
-      <li>JavaScript &amp; Node.js</li>
-      <li>Python &amp; Data Analysis</li>
-      <li>MongoDB &amp; PostgreSQL</li>
-      <li>Microservizi &amp; Docker</li>
-      <li>Problem Solving &amp; Teamwork</li>
-    </ul>
-  </section>
+      return (
+        <div className={darkMode ? 'min-h-screen bg-gray-900 text-white' : 'min-h-screen bg-white text-gray-900'}>
+          <header className="flex items-center justify-between p-6">
+            <h1 className="text-3xl font-bold">Ciao, sono [Il Tuo Nome]</h1>
+            <button
+              onClick={toggleDark}
+              className="px-4 py-2 rounded-lg border hover:bg-gray-200 dark:hover:bg-gray-800 transition"
+            >
+              {darkMode ? 'Light Mode' : 'Dark Mode'}
+            </button>
+          </header>
 
-  <section id="contact">
-    <h2>Contatti</h2>
-    <p>Email: <a href="mailto:agalliutahir@gmail.com">agalliutahir@gmail.com</a></p>
-    <p>Telefono: +39 346 6206432</p>
-    <p>Angera (VA), Italia</p>
-  </section>
+          <main className="flex flex-col items-center p-6">
+            <motion.img
+              src="./foto.jpg"
+              alt="La mia foto"
+              className="w-48 h-48 rounded-full shadow-lg mb-6"
+              initial={{ scale: 0 }}
+              animate={{ scale: 1 }}
+              transition={{ duration: 0.8 }}
+            />
 
-  <footer>
-    &copy; 2025 Tahir Agalliu. Tutti i diritti riservati.
-  </footer>
+            <motion.p
+              className="max-w-xl text-center text-lg leading-relaxed"
+              initial={{ opacity: 0 }}
+              animate={{ opacity: 1 }}
+              transition={{ delay: 0.5, duration: 1 }}
+            >
+              Benvenuto nel mio portfolio! Sono uno sviluppatore appassionato di tecnologie moderne come React, Tailwind CSS e Framer Motion. Esplora ciò che ho creato e scopriremo insieme nuove sfide.
+            </motion.p>
+          </main>
+
+          <footer className="text-center p-4 text-sm opacity-75">
+            © {new Date().getFullYear()} [Il Tuo Nome]
+          </footer>
+        </div>
+      );
+    }
+
+    ReactDOM.createRoot(document.getElementById('root')).render(<App />);
+  </script>
 </body>
 </html>
