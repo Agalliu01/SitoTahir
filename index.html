@@ -1,13 +1,112 @@
 <!DOCTYPE html>
 <html lang="it">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Il mio sito</title>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Tahir Agalliu - Portfolio</title>
+  <style>
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+    body { font-family: Arial, sans-serif; line-height: 1.6; color: #333; }
+    header { background: #f4f4f4; padding: 20px; text-align: center; }
+    header h1 { font-size: 2.5rem; margin-bottom: 10px; }
+    nav ul { list-style: none; display: flex; justify-content: center; gap: 20px; }
+    nav a { text-decoration: none; color: #333; font-weight: bold; }
+    section { padding: 40px 20px; max-width: 800px; margin: auto; }
+    .experience, .education, .skills { margin-bottom: 40px; }
+    .item { margin-bottom: 20px; }
+    .item h3 { font-size: 1.25rem; color: #555; }
+    .item span { display: block; font-size: 0.9rem; color: #777; margin-bottom: 5px; }
+    .skills ul { list-style: disc inside; columns: 2; }
+    footer { background: #f4f4f4; padding: 20px; text-align: center; }
+    @media(max-width: 600px) {
+      nav ul { flex-direction: column; gap: 10px; }
+      .skills ul { columns: 1; }
+    }
+  </style>
 </head>
 <body>
-  <h1>Benvenuto nel mio sito!</h1>
-  <p>Creato con Visual Studio Code.</p>
-  <h1> Provo con delle modifiche real time</h1>
+  <header>
+    <h1>Tahir Agalliu</h1>
+    <nav>
+      <ul>
+        <li><a href="#about">Chi sono</a></li>
+        <li><a href="#experience">Esperienza</a></li>
+        <li><a href="#education">Istruzione</a></li>
+        <li><a href="#skills">Competenze</a></li>
+        <li><a href="#contact">Contatti</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <section id="about">
+    <h2>Chi sono</h2>
+    <p>Laureato triennale in Informatica (10 luglio 2025) presso l'Università degli Studi dell'Insubria e iscritto alla laurea magistrale in Informatica presso l'Università degli Studi di Milano.</p>
+  </section>
+
+  <section id="experience" class="experience">
+    <h2>Esperienza</h2>
+    <div class="item">
+      <h3>Tutor Universitario (Giugno 2025)</h3>
+      <span>Università degli Studi dell'Insubria</span>
+      <p>Inserimento e gestione di dati per fini statistici presso database relazionali universitari.</p>
+    </div>
+    <div class="item">
+      <h3>Operatore Marmista CNC (Giugno 2021 - Agosto 2021)</h3>
+      <span>Dinger Stone, Endingen (Germania)</span>
+    </div>
+    <div class="item">
+      <h3>Agente di Commercio (Febbraio 2021 - Aprile 2021)</h3>
+      <span>Next (Aura Corporation), Varese (VA)</span>
+    </div>
+    <div class="item">
+      <h3>Legionario (Ottobre 2020 - Gennaio 2021)</h3>
+      <span>Legione Straniera Francese</span>
+    </div>
+    <div class="item">
+      <h3>Stagista Fresatore CNC (Dicembre 2019 - Settembre 2020)</h3>
+      <span>OMSC, Angera (VA)</span>
+    </div>
+  </section>
+
+  <section id="education" class="education">
+    <h2>Istruzione</h2>
+    <div class="item">
+      <h3>Laurea Triennale in Informatica (L-31)</h3>
+      <span>Università degli Studi dell'Insubria, Varese (2022-2025)</span>
+    </div>
+    <div class="item">
+      <h3>Diploma in Informatica</h3>
+      <span>IIS Ponti, Gallarate (VA), 2021-2022</span>
+    </div>
+    <div class="item">
+      <h3>Qualifica Operatore Macchine Utensili</h3>
+      <span>ISIS Newton, Varese (VA), 2018-2019</span>
+    </div>
+  </section>
+
+  <section id="skills" class="skills">
+    <h2>Competenze</h2>
+    <ul>
+      <li>Java (OO, IntelliJ/Eclipse/Android Studio)</li>
+      <li>JavaScript (Front-end, Node.js)</li>
+      <li>MongoDB & PostgreSQL</li>
+      <li>Kotlin (Android Studio)</li>
+      <li>Python (scripting, analisi dati)</li>
+      <li>Architettura a microservizi & Docker</li>
+      <li>Resilienza, problem solving, lavoro in team</li>
+      <li>Adattabilità e apprendimento rapido</li>
+    </ul>
+  </section>
+
+  <section id="contact">
+    <h2>Contatti</h2>
+    <p>Email: <a href="mailto:agalliutahir@gmail.com">agalliutahir@gmail.com</a></p>
+    <p>Telefono: +39 346 6206432</p>
+    <p>Luogo: Angera (VA), 21021</p>
+  </section>
+
+  <footer>
+    <p>&copy; 2025 Tahir Agalliu. Tutti i diritti riservati.</p>
+  </footer>
 </body>
 </html>
